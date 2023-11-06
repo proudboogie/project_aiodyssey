@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LAYOUT */
+body{
+  @apply bg-neutral-800 font-handjet;
+}
+
+ .scanlines {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  z-index: 50;
+  background-image: url("/assets/images/scan.webp");
+  opacity: .25;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.nav{
+  @apply w-full h-14 z-0 absolute top-0 lg:h-11 bg-primary-yellow;
+}
+
+/*   NAV  */
+.nav__logo_text {
+  @apply font-semibold text-3xl text-neutral-800 pt-1 lg:pt-0;
+  letter-spacing: 0.6rem;
+}
+
+.nav__profile_btn{
+  @apply pt-3 pb-3 justify-end;
+}
+
+.nav__dropdown {
+  @apply absolute right-0 top-14 min-w-[180px] flex flex-col text-end bg-primary-yellow;
+}
+
+.nav__dropdown_text{
+  @apply justify-end;
+}
+
+/*   HOME   */
+.home__search_input {
+  @apply block w-full py-2.5 pl-5 pr-12 text-3xl font-normal focus:outline-none bg-neutral-700 text-primary-yellow;
+}
+
+.home__search_input::placeholder{
+  @apply text-primary-yellow;
+}
+
+/* PROMPT CARD */
+.copy_btn {
+  @apply cursor-pointer py-1 px-2 font-bold mt-1 bg-primary-yellow;
+}
+
+.prompt__layout {
+  @apply space-y-6 pb-8 md:columns-2 xl:columns-3;
+}
+
+.prompt__card {
+  @apply flex-1 break-inside-avoid bg-neutral-700 p-4 md:w-[360px] lg:w-[400px] w-full h-auto;
+}
+
+.prompt__name{
+  @apply font-normal lg:text-4xl text-3xl text-primary-yellow;
+  letter-spacing: 0.1rem;
+}
+.prompt__email{
+  @apply font-normal lg:text-2xl text-2xl text-secondary-yellow;
+}
+.prompt__prompt{
+  @apply font-normal lg:text-3xl text-2xl text-primary-yellow;
+}
+.prompt__tag{
+  @apply font-medium text-2xl lg:text-3xl text-secondary-yellow;
+}
+
+.prompt__edit_button{
+  @apply text-xl font-bold cursor-pointer text-orange-400 bg-neutral-700 px-2 py-1 hover:bg-orange-400 hover:text-neutral-800;
+}
+.prompt__delete_button{
+  @apply text-xl font-bold cursor-pointer text-neutral-800 bg-orange-400  px-2 py-1 hover:bg-neutral-800 hover:text-orange-400;
+}
+
+/* FORM */
+.form{
+  @apply mt-10 w-full max-w-screen-md flex flex-col gap-7 py-4 px-6 bg-primary-yellow;
+}
+
+.form__entry_button{
+  @apply text-3xl font-semibold cursor-pointer bg-neutral-800 px-3 py-1 text-primary-yellow hover:bg-orange-500 hover:text-neutral-800;
+}
+
+.form__cancel_button{
+  @apply text-3xl font-semibold cursor-pointer text-neutral-800 hover:text-primary-yellow  px-3 py-1 hover:bg-neutral-700 bg-primary-yellow;
+}
+
+.form__title{
+  @apply font-bold text-4xl text-neutral-800 opacity-90;
+}
+
+.form__textarea {
+  @apply w-full flex h-[200px] mt-2 p-3 text-3xl font-semibold outline-0 text-primary-yellow bg-neutral-800;
+}
+.form__textarea::-webkit-scrollbar {
+  width: 0.8em;
+}
+.form__textarea::-webkit-scrollbar-track {
+  @apply bg-primary-yellow;
+}
+.form__textarea::-webkit-scrollbar-thumb {
+ @apply bg-neutral-600;
+}
+
+.form__input {
+  @apply w-full flex mt-2 p-3 text-3xl font-semibold outline-0 bg-neutral-800 text-primary-yellow;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Profile Component */
+.profile {
+  @apply mx-auto flex flex-col gap-2;
+}
+
+/* UNIVERSAL */
+.universal__head_text{
+  @apply mt-5 text-5xl font-semibold lg:text-8xl text-primary-yellow;
+}
+
+.universal__description {
+  @apply text-xl font-normal lg:text-3xl max-w-4xl mt-5 text-primary-yellow;
+}
+
+.universal__head_text--secondary{
+  @apply font-semibold text-6xl lg:text-8xl;
+}
+
+.universal__btn {
+  @apply text-neutral-800 px-1 pt-1 pb-2 hover:bg-neutral-700 hover:text-primary-yellow text-center flex items-center justify-center font-semibold text-2xl;
+  letter-spacing: .2rem;
+}
+
+/* FLEX */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
