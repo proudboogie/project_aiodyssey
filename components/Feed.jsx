@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react"
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from "next-auth/react"
 
 import PromptCard from "./PromptCard";
@@ -28,9 +28,12 @@ const Feed = () => {
   const [searchText, setSearchText] = useState('');
   const [searchTimeout, setSearchTimeout] = useState(null)
   const [searchedResults, setSearchedResults ] = useState([]);
+  const [receivedTag, setReceivedTag] = useState(null)
 
   const router = useRouter();
   const { data: session } = useSession();
+  const searchParams = useSearchParams();
+
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -39,10 +42,28 @@ const Feed = () => {
       
       setInitialPosts(data);
       setSearchedResults(data);
+
+      setReceivedTag(searchParams.get('tag'));
     } 
 
     fetchPosts();
   }, []); 
+
+  //tag search across routes
+  useEffect(() => {
+    if(receivedTag != null){
+      clearTimeout(searchTimeout);
+  setSearchText(receivedTag);
+
+    setSearchTimeout(
+    setTimeout(() => {
+      let searchResult = filterPrompts(receivedTag);
+      setSearchedResults(searchResult);
+    }, 500)
+  );
+  console.log(receivedTag)
+    }
+  }, [receivedTag]);
 
   //Handle search and tag
   const filterPrompts = (searchtext) => {

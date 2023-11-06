@@ -47,6 +47,10 @@ const MyProfile = () => {
       }
     }
 
+    const handleTagClick = (tagName) => {
+      router.push(`/?tag=${tagName}`)
+    }
+
     if(status == "loading"){
       return (
         <>
@@ -74,6 +78,7 @@ const MyProfile = () => {
       data={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
+      handleTagClick={handleTagClick}
       />
       
     )

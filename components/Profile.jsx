@@ -1,6 +1,6 @@
 import PromptCard from "./PromptCard"
 
-const PromptCardList = ({ data, handleDelete, handleEdit }) => {
+const PromptCardList = ({ data, handleDelete, handleEdit, handleTagClick }) => {
   return (
   <div className="prompt__layout">
     {data.map((post, index) => (
@@ -9,12 +9,15 @@ const PromptCardList = ({ data, handleDelete, handleEdit }) => {
       post={post}
       handleEdit={() => handleEdit && handleEdit(post)}
       handleDelete={() => handleDelete && handleDelete(post)}
+      handleTagClick={handleTagClick}
       />
   ))}
 </div>)
 }
 
-const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
+const Profile = ({ name, desc, data, handleEdit, handleDelete, handleTagClick }) => {
+
+  
   return (
     <section className='profile'>
         <h1 className='universal__head_text universal__head_text--secondary'>
@@ -25,6 +28,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
         data={data}
         handleDelete={handleDelete}
         handleEdit={handleEdit}
+        handleTagClick={handleTagClick}
         />
     </section>
   )
