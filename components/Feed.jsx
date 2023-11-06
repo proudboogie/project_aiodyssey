@@ -34,7 +34,7 @@ const Feed = ({ repo }) => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch('/api/prompt', { next: { tags: ['collection']}});
+      const response = await fetch('/api/prompt', { cache: 'no-store' });
       const data = await response.json();
       
       setInitialPosts(data);
