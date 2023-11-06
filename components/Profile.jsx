@@ -20,7 +20,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
         <h1 className='universal__head_text universal__head_text--secondary'>
             {name} Profile
         </h1>
-        <p className='universal__description text-left'>{desc}</p>
+        <p className='universal__description text-left pb-3'>{desc}</p>
         <PromptCardList 
         data={data}
         handleDelete={handleDelete}

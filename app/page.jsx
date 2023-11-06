@@ -6,7 +6,7 @@ const Home = () => {
         <h1 className="universal__head_text text-center">
         AI Odyssey:
             <br />
-            <span className="text-orange-500 font-extralight text-center">  Your Decision, Your Story
+            <span className="text-orange-500 font-extralight text-5xl lg:text-8xl md:text-7xl">  Your Decision, Your Story
 </span>
         </h1>
         <p className="universal__description text-center">

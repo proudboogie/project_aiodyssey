@@ -75,7 +75,7 @@ const Nav = () => {
             {session?.user ? (
                 <div className='flex'>
                         <div 
-                        className='universal__btn cursor-pointer nav__profile_btn' 
+                        className='nav__profile_btn cursor-pointer' 
                         onClick={() => {setToggleDropDown((prev) => !prev)}}
                         >
                             {session?.user.name}

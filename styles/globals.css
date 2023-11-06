@@ -38,7 +38,8 @@ body{
 }
 
 .nav__profile_btn{
-  @apply pt-3 pb-3 justify-end;
+  @apply pt-3 pb-3 justify-end text-neutral-800 px-1 hover:bg-neutral-700 hover:text-primary-yellow text-center flex items-center font-semibold text-2xl;
+  letter-spacing: .2rem;
 }
 
 .nav__dropdown {
@@ -51,7 +52,7 @@ body{
 
 /*   HOME   */
 .home__search_input {
-  @apply block w-full py-2.5 pl-5 pr-12 text-3xl font-normal focus:outline-none bg-neutral-700 text-primary-yellow;
+  @apply block w-full py-2.5 pl-5 pr-12 lg:text-3xl text-xl md:text-2xl font-normal focus:outline-none bg-neutral-700 text-primary-yellow;
 }
 
 .home__search_input::placeholder{
@@ -138,7 +139,7 @@ body{
 
 /* UNIVERSAL */
 .universal__head_text{
-  @apply mt-5 text-5xl font-semibold lg:text-8xl text-primary-yellow;
+  @apply mt-5 text-6xl font-semibold md:text-8xl text-primary-yellow;
 }
 
 .universal__description {
