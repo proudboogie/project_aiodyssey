@@ -75,7 +75,7 @@ const Nav = () => {
             {session?.user ? (
                 <div className='flex'>
                         <div 
-                        className='nav__profile_btn cursor-pointer' 
+                        className='nav__mobile_btn cursor-pointer' 
                         onClick={() => {setToggleDropDown((prev) => !prev)}}
                         >
                             {session?.user.name}
@@ -124,7 +124,7 @@ const Nav = () => {
                     type='button'
                     key={provider.name}
                     onClick={() => signIn(provider.id)}
-                    className='universal__btn'
+                    className='nav__mobile_btn'
                     >
                         Sign In
                     </button>

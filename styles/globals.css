@@ -37,7 +37,7 @@ body{
   letter-spacing: 0.6rem;
 }
 
-.nav__profile_btn{
+.nav__mobile_btn{
   @apply pt-3 pb-3 justify-end text-neutral-800 px-1 hover:bg-neutral-700 hover:text-primary-yellow text-center flex items-center font-semibold text-2xl;
   letter-spacing: .2rem;
 }
