@@ -22,7 +22,7 @@ const PromptCardList = ({ data, handleTagClick, handleProfile }) => {
   );
 }
 
-const Feed = ({ repo }) => {
+const Feed = () => {
   const [initialPosts, setInitialPosts] = useState([])
 
   const [searchText, setSearchText] = useState('');
@@ -34,7 +34,7 @@ const Feed = ({ repo }) => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch('/api/prompt', { cache: 'no-store' });
+      const response = await fetch('/api/prompt');
       const data = await response.json();
       
       setInitialPosts(data);
