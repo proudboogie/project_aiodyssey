@@ -19,9 +19,9 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete, handleProf
 
   return (
     <div className='prompt__card'>
-      <div className='flex justify-between items-start gap-5'>
+      <div className='flex justify-between items-start gap-1'>
         <div
-        className='flex-1 flex justify-start items-center gap-3 cursor-pointer'
+        className='flex-1 flex justify-start items-center cursor-pointer'
         onClick={() => handleProfile && handleProfile(post.creator)}
         >
           <div className='flex flex-col'>
