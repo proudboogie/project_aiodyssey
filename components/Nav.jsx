@@ -22,7 +22,7 @@ const Nav = () => {
     
 
   return (
-    <nav className='flex-between w-full mb-16'>
+    <nav className='flex-between w-full lg:mb-16 mb-4'>
         <Link href="/" className='flex gap-2 flex-center'>
             <p className='nav__logo_text'>AI Odyssey</p>
         </Link>

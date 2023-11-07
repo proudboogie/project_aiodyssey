@@ -95,7 +95,7 @@ body{
 
 /* FORM */
 .form{
-  @apply mt-10 w-full max-w-screen-md flex flex-col gap-7 py-4 px-6 bg-primary-yellow;
+  @apply mt-6 mb-6 lg:mt-10 w-full max-w-screen-md flex flex-col gap-7 py-4 px-6 bg-primary-yellow;
 }
 
 .form__entry_button{
@@ -107,11 +107,11 @@ body{
 }
 
 .form__title{
-  @apply font-bold text-4xl text-neutral-800 opacity-90;
+  @apply font-bold text-2xl md:text-4xl text-neutral-800 opacity-90;
 }
 
 .form__textarea {
-  @apply w-full flex h-[200px] mt-2 p-3 text-3xl font-semibold outline-0 text-primary-yellow bg-neutral-800;
+  @apply w-full flex h-[200px] mt-2 p-3 text-2xl md:text-3xl font-semibold outline-0 text-primary-yellow bg-neutral-800;
 }
 .form__textarea::-webkit-scrollbar {
   width: 0.8em;
@@ -124,12 +124,12 @@ body{
 }
 
 .form__input {
-  @apply w-full flex mt-2 p-3 text-3xl font-semibold outline-0 bg-neutral-800 text-primary-yellow;
+  @apply w-full flex mt-2 p-3 text-2xl md:text-3xl font-semibold outline-0 bg-neutral-800 text-primary-yellow;
 }
 
 /* Feed Component */
 .feed {
-  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+  @apply mt-6 md:mt-10 lg:mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
 }
 
 /* Profile Component */
