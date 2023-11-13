@@ -10,6 +10,19 @@ body{
   @apply bg-neutral-800 font-handjet;
 }
 
+body::-webkit-scrollbar {
+  @apply w-5;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-neutral-600;
+  
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-primary-yellow;
+
+
+}
+
  .scanlines {
   width: 100vw;
   min-height: 100vh;
